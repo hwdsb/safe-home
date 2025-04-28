@@ -32,13 +32,11 @@
     <div class="col-12 centered">
       <script src="https://polypad.amplify.com/api/latest/polypad.js?lang=en&apiKey=Anp3nt1y6S60qjjoK6SnUQ"></script>
       <div id="polypad" style="width: 100%; height: 500px;"></div>
-      <script>Polypad.create(document.querySelector('#polypad'))</script>  
-<script>
-  Polypad.create({
-    sidebar: 'geometry,polygons,polyominoes,tangram,penrose,pentagons,solids,measuring,patterns,numbers,number-tiles,number-bars,number-frames,number-cards,number-line,primes,number-dots,number-grid,number-tools,fractions,fraction-bars,fraction-circles,algebra,balance,axes,sliders,probability,charts'
+      <script>
+        Polypad.create(document.querySelector('#polypad'), {
+          sidebar: 'geometry,polygons,polyominoes,tangram,penrose,pentagons,solids,measuring,patterns,numbers,number-tiles,number-bars,number-frames,number-cards,number-line,primes,number-dots,number-grid,number-tools,fractions,fraction-bars,fraction-circles,algebra,balance,axes,sliders,probability,charts,playing-cards,polyhedral-dice,non-trans-dice'
   });
 </script>
-
     </div>
   </div>
 </div>
