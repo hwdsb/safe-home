@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portable web-hosted version of the SharePoint resource page 'Safe Exam Browser (Beyond EQAO)'.">
+  <title>Safe Exam Browser (Beyond EQAO) — V2.1</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Assessment Support Resource</p>
+        <h1>Safe Exam Browser (Beyond EQAO)</h1>
+        <p class="lede">A polished, portable HTML rebuild of the original SharePoint resource page, prepared for GitHub Pages hosting.</p>
+      </div>
+      <nav class="hero-nav" aria-label="On-page navigation">
+        <h2>Jump to</h2>
+        <ul>
+          <li><a href="#summary">Resource Summary</a></li>
+          <li><a href="#files">Available SEB Files</a></li>
+          <li><a href="#config-tool">Config Tool</a></li>
+          <li><a href="#configuration">Changing a Configuration File</a></li>
+          <li><a href="#network">Network Rules</a></li>
+          <li><a href="#onenote">OneNote Setup</a></li>
+          <li><a href="#locking">Locking / Access</a></li>
+          <li><a href="#repair">Repair Permissions</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container layout">
+    <aside class="toc" aria-label="Table of contents">
+      <div class="toc-box">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#summary">Resource Summary</a></li>
+          <li><a href="#files">Available SEB Files</a></li>
+          <li><a href="#config-tool">Locating the Tool</a></li>
+          <li><a href="#configuration">Changing a Configuration File</a></li>
+          <li><a href="#network">Network and Navigation Rules</a></li>
+          <li><a href="#onenote">Using OneNote as the Start Page</a></li>
+          <li><a href="#locking">Preventing Student Editing</a></li>
+          <li><a href="#repair">Repairing Permissions</a></li>
+        </ol>
+      </div>
+    </aside>
+
+    <div class="content">
+      <section id="summary" class="panel">
+        <h2>Resource Summary</h2>
+        <p>The Safe Exam Browser can be used to ensure students can only access certain resources when completing summative assessment activities.</p>
+        <div class="callout warning"><strong>Important:</strong> Please take great care to ensure the application of these tools does not impact students who require additional supports (for example, assistive technology).</div>
+        <p>This guide outlines several prebuilt configuration files as well as the basic process for editing or creating your own <code>.seb</code> configuration file for classroom use.</p>
+      </section>
+
+      <section id="files" class="panel">
+        <h2>Available SEB Files</h2>
+        <p>A few different configurations were created to address common assessment use cases, including EQAO assessments, math course assessments, and Brightspace / HUB assessments.</p>
+        <div class="callout info"><strong>Note:</strong> SEB is force-installed on student devices. Teachers may need to install it first from Company Portal or Software Centre.</div>
+        <div class="grid two-up cards">
+          <article class="card">
+            <h3>Core Configuration Files</h3>
+            <ul class="file-list">
+              <li><code>HWDSB_EQAO_MATH.seb</code><span>Modified March 31, 2025</span></li>
+              <li><code>HWDSB_EQAO_W_RESOURCES.seb</code><span>Modified December 13, 2024</span></li>
+              <li><code>HWDSB_SEB_HUB.seb</code><span>Modified October 17, 2024</span></li>
+              <li><code>HWDSB_SEB_MATHTOOLS.seb</code><span>Modified October 17, 2024</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Editable OneNote Templates</h3>
+            <ul class="file-list">
+              <li><code>HWDSB_SEB_OneNote_inOneDrive.seb</code><span>Modified January 30, 2025</span></li>
+              <li><code>HWDSB_SEB_OneNote_inTeams.seb</code><span>Modified January 30, 2025</span></li>
+            </ul>
+          </article>
+        </div>
+        <figure class="image-panel">
+          <img src="assets/images/seb-files-library.svg" alt="Placeholder image for the SharePoint document library showing SEB files.">
+          <figcaption>Placeholder for the original SharePoint screenshot of the SEB files library. Replace this with the real image if you export it from SharePoint.</figcaption>
+        </figure>
+      </section>
+
+      <section id="config-tool" class="panel">
+        <h2>Locating the SEB Configuration Tool</h2>
+        <p>To modify one of the configuration files, first locate the SEB Config Tool on a Windows device:</p>
+        <div class="path-box"><code>Windows (C:) / Program Files / SafeExamBrowser / Configuration / SEBConfigTool</code></div>
+        <figure class="image-panel">
+          <img src="assets/images/config-tool-location.svg" alt="Placeholder image for locating the SEB Config Tool in Windows.">
+          <figcaption>Placeholder for the original screenshot showing the SEBConfigTool location in Windows.</figcaption>
+        </figure>
+      </section>
+
+      <section id="configuration" class="panel">
+        <h2>Changing a Configuration File</h2>
+        <ol>
+          <li>Open the <strong>Config File</strong> tab in the SEB Config Tool.</li>
+          <li>Download one of the <code>.seb</code> files and save it locally.</li>
+          <li>Select <strong>Open Settings…</strong> to open the file for editing.</li>
+          <li>Enter the administrator password if prompted.</li>
+        </ol>
+        <div class="callout neutral"><strong>Shared password:</strong> <code>REDACTED</code></div>
+        <p>Within the <strong>General</strong> tab, you can protect the configuration file with an administrator password and optionally create a separate quit / unlock password. This is also where the <strong>Start Page</strong> URL is configured.</p>
+        <p>The prebuilt files already point to HTML pages with the required links included, but you can change the start page to any URL that fits your assessment workflow.</p>
+        <figure class="image-panel grid two-up image-grid">
+          <img src="assets/images/config-general-tab.svg" alt="Placeholder image for the General tab in the SEB configuration tool.">
+          <img src="assets/images/config-network-tab.svg" alt="Placeholder image for the Network tab in the SEB configuration tool.">
+          <figcaption class="full-width">Placeholders for the original screenshots of the General and Network tabs in the SEB configuration tool.</figcaption>
+        </figure>
+      </section>
+
+      <section id="network" class="panel">
+        <h2>Network and Navigation Rules</h2>
+        <ul>
+          <li>Simply adding a URL is not enough—students also need a way to navigate to that link.</li>
+          <li>If you create your own start page, it must contain links to the permitted resources.</li>
+          <li>Students do not have access to the browser address bar, so they cannot manually type URLs.</li>
+        </ul>
+        <p>If you need access to an entire site instead of one page, you can use a wildcard after the root URL.</p>
+        <div class="path-box"><code>hwdsb.elearningontario.ca/*</code></div>
+        <p>After making your changes, return to the <strong>Config File</strong> tab and choose <strong>Save Settings As…</strong> to create a new configuration file.</p>
+      </section>
+
+      <section id="onenote" class="panel">
+        <h2>Using OneNote as the Start Page</h2>
+        <p>The OneNote option can support either a dedicated assessment notebook or an open-book approach where students can access their class notes during an assessment.</p>
+        <ol>
+          <li>Open the notebook in OneNote Online.</li>
+          <li>Select the <strong>Class Notebook</strong> tab.</li>
+          <li>Choose <strong>Manage</strong>.</li>
+          <li>Copy the notebook link shown in the bottom-right corner of the management page.</li>
+        </ol>
+        <div class="callout warning"><strong>Important:</strong> If the copied link begins with <code>onenote:</code>, remove that prefix so the URL begins with <code>https://</code> before placing it in the Start Page field.</div>
+        <p>The OneNote template files already include the necessary login and redirect URLs under the Network tab; teachers only need to insert the notebook URL in the Start Page field.</p>
+      </section>
+
+      <section id="locking" class="panel">
+        <h2>Preventing Students from Editing OneNote Assessments</h2>
+        <div class="grid two-up cards">
+          <article class="card">
+            <h3>The easy way: Page Locking</h3>
+            <ol>
+              <li>Open the <strong>Class Notebook</strong> tab.</li>
+              <li>Select <strong>Review Student Work</strong>.</li>
+              <li>Choose the section where the page was distributed.</li>
+              <li>Select the page you want to review.</li>
+              <li>Use <strong>Page Locking</strong> to lock the page.</li>
+            </ol>
+          </article>
+          <article class="card">
+            <h3>The heavy-handed option: Remove notebook access</h3>
+            <ol>
+              <li>Open Microsoft Teams.</li>
+              <li>Go to the team’s General channel.</li>
+              <li>Open <strong>Files</strong>, then open the folder in SharePoint.</li>
+              <li>Open <strong>Site contents</strong>.</li>
+              <li>Open the <strong>Site Assets</strong> folder and locate the class notebook.</li>
+              <li>Use <strong>Manage Access</strong>, then <strong>Advanced settings</strong>.</li>
+              <li>Select student accounts and remove user permissions.</li>
+            </ol>
+            <div class="callout danger"><strong>Caution:</strong> Make sure you do not remove your own permissions.</div>
+          </article>
+        </div>
+        <figure class="image-panel">
+          <img src="assets/images/manage-access-flow.svg" alt="Placeholder image for the SharePoint manage access and advanced permissions workflow.">
+          <figcaption>Placeholder for the original SharePoint screenshots showing Manage Access and Advanced settings.</figcaption>
+        </figure>
+      </section>
+
+      <section id="repair" class="panel">
+        <h2>Repairing OneNote Permissions</h2>
+        <p>When students need to be added back after permissions were removed, use the public OneNote Class Notebook permission repair tool:</p>
+        <p><a href="https://www.onenote.com/classnotebook/notebook-fix?auth=2">https://www.onenote.com/classnotebook/notebook-fix?auth=2</a></p>
+        <p>Locate the notebook and choose <strong>Fix Permissions</strong>. This will restore student access based on membership in the underlying Team.</p>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>Portable HTML version prepared for external hosting on GitHub Pages.</p><p class="muted small">This V2.1 package includes responsive overflow fixes for long filenames in the file cards.</p></div></footer>
+</body>
+</html>
